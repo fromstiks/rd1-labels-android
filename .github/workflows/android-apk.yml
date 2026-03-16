@@ -34,14 +34,17 @@ jobs:
         run: |
           sdkmanager "platforms;android-35" "build-tools;35.0.0"
 
-      - name: Show files
+      - name: Show project files
         run: |
           pwd
           ls -la
-          find . -maxdepth 4 -type f | sort
-
+          echo "----- ROOT -----"
+          find . -maxdepth 2 -type f | sort
+          echo "----- APP -----"
+          find app -maxdepth 5 -type f | sort || true
+      
       - name: Build debug APK
-        run: gradle assembleDebug --no-daemon
+        run: gradle assembleDebug --no-daemon --stacktrace --info
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4

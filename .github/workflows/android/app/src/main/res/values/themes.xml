@@ -1,9 +1,0 @@
-<resources>
-    <style name="Theme.RD1Labels" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">#FF9F1A</item>
-        <item name="colorPrimaryVariant">#FF9F1A</item>
-        <item name="colorOnPrimary">#111111</item>
-        <item name="android:statusBarColor">#0B0B0F</item>
-        <item name="android:navigationBarColor">#0B0B0F</item>
-    </style>
-</resources>
